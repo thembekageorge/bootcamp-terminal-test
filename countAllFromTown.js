@@ -17,7 +17,3 @@ var count = 0;
    }
 return count;
 };
-
-module.exports = function(name){
-    return "Hello, " + name;
-}

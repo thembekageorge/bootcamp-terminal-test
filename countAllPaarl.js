@@ -15,8 +15,3 @@ return count;
 
 };
 countAllPaarl('CL 900, CJ 678 543, CA 34567, CJ 67890, CN 7864');
-
-
-module.exports = function(name){
-    return "Hello, " + name;
-}

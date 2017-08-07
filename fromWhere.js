@@ -9,10 +9,3 @@ function fromWhere(regNum)
   else
    return 'Some other place!';
 };
-
-
-
-
-module.exports = function(name){
-    return "Hello, " + name;
-}

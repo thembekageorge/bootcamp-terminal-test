@@ -29,10 +29,3 @@ function totalPhoneBill(CallsAndSms){
 }
 
 console.log(totalPhoneBill('call, sms, call, sms, sms'));
-
-
-
-
-module.exports = function(name){
-    return "Hello, " + name;
-}

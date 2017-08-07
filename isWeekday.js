@@ -5,10 +5,3 @@ function isWeekday(day){
 }
 console.log(isWeekday("Saturday"));
 console.log(isWeekday("Monday"));
-
-
-
-
-module.exports = function(name){
-    return "Hello, " + name;
-}

@@ -10,8 +10,3 @@ var transportfee;
 }
 
 console.log(transportFee('morning'));
-
-
-module.exports = function(name){
-    return "Hello, " + name;
-}

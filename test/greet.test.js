@@ -1,15 +1,15 @@
-var greetFunction = require('test/greet.js');
 
-const assert = require('assert');
+var assert = require('assert');
 
-describe('The greet function', function(){
+const greetF = require('../greet');
 
-    it('should greet Andrew correctly', function(){
-        assert.equal('Hello, Andrew', greet('Andrew'));
+
+describe('greet()', function() {
+    it("should greet Thesh correctly", function(){
+      assert.equal(greetF('Thesh'), 'Hello, Thesh');
     });
 
-    it('should greet Karen correctly', function(){
-
-        assert.equal('Hello, Karen', greet('Karen'));
+    it ("should greet Andrew correctly", function() {
+       assert.equal(greetF('Andrew'), 'Hello, Andrew')
     });
 });
