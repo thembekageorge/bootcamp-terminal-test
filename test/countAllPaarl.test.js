@@ -1,6 +1,14 @@
-describe('The countAllPaarl', function(){
 
-    it('should return true if regNum starts with CY', function(){
-        assert.equal('true', countAllPaarl('CY2258'));
+const assert = require('assert');
+
+const countPaarlTestFunction = require('../countAllPaarl');
+
+describe('countAllPaarl()', function() {
+   it ("should return '2 paarl plates' when given a string containing 2 paarl plates", function() {
+      assert.equal(countPaarlTestFunction('CA 345-155,CJ 555-555,CL 345 789,CJ 444-444'), '2 Paarl plates');
+   });
+
+    it ("should return '0 paarl plates' when no paarl plates is found in string", function() {
+       assert.equal(countPaarlTestFunction('CA 345-155,CA 555-555,CL 345 789'), '0 Paarl plates')
     });
 });

@@ -1,7 +1,14 @@
+module.exports = function(day) {
+    var todayDay = day.getDay();
+    var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-function isWeekday(day){
- var weekend = !day.startsWith("S");
-  return weekend;
+    var weekDay = week[todayDay];
+
+    var determineWeekday = weekDay.startsWith('S');
+
+    if (determineWeekday === false) {
+        return true;
+      } else {
+        return false;
+      }
 }
-console.log(isWeekday("Saturday"));
-console.log(isWeekday("Monday"));

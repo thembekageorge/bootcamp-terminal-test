@@ -1,7 +1,7 @@
-function yearsAgo(year){
-var today = new Date();
-var currentYear = today.getFullYear();
-var yearsA =  currentYear-year ;
- return yearsA;
+
+module.exports = function(year) {
+  var thisYear = new Date();
+  var yearAgo = thisYear.getFullYear() - year;
+
+  return yearAgo + " years ago.";
 }
-console.log("That was " + yearsAgo(1997)+" years ago");

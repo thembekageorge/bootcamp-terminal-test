@@ -1,19 +1,17 @@
-function countAllFromTown(registrationNum,location){
 
-var splittedList = registrationNum.split(',');
- console.log(splittedList);
-//  var RegisNum = [];
-var count = 0;
-   for (var i=0; i<splittedList.length; i++){
-     //var something = trim(regis)
-      var registrationNumber = splittedList[i];
-      var something = registrationNumber.trim(" ");
-     // console.log(something[i]);
-        if (something.startsWith(location)){
-       console.log(something[i]);
-        // RegisNum.push(registrationNumber);
-          count = count+1;
+module.exports = function(regNum, location) {
+    var splitReg = regNum.split(',');
+
+    var townList = [];
+
+    var newList = [];
+    for (var x = 0; x < splitReg.length; x++) {
+        townList.push(splitReg[x]);
+
+        if (townList[x].includes(location)) {
+            newList.push(townList[x]);
         }
-   }
-return count;
-};
+    }
+
+    return newList.length;
+}

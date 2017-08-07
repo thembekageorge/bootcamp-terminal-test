@@ -1,31 +1,24 @@
-function totalPhoneBill(CallsAndSms){
+module.exports = function(phoneUsage) {
+    var splitPhoneUsage = phoneUsage.split(',');
 
-  var total = 0;
-  var splittedList = CallsAndSms.split(", ");
+    const costPerCall = 2.75;
+    const costSms = 0.65;
 
-  var callList = [];
-  var smsList = [];
+    var listOfUsage = [];
+    var call = [];
+    var sms = [];
 
-  for (var i=0; i<splittedList.length; i++){
+    for (var x = 0; x < splitPhoneUsage.length; x++) {
+        listOfUsage.push(splitPhoneUsage[x]);
 
-    var element = splittedList[i];
+        if (listOfUsage[x].includes('sms')) {
+            sms.push(listOfUsage['sms']);
+        } else if (listOfUsage[x].includes('call')) {
+            call.push(listOfUsage['call']);
+        }
+    }
 
-    if (element === 'call')
-      callList.push(element);
-    if (element === 'sms')
-      smsList.push(element);
-  }
-  var HowManyCalls = callList.length;
-  var HowManySms = smsList.length;
+    var totalPhoneBill = (sms.length * costSms) + (call.length * costPerCall);
 
-  var oneCall = 2.75;
-  var oneSms = 0.65;
-
-  CallCost = HowManyCalls * oneCall;
-  SmsCost = HowManySms * oneSms ;
-
-  total = CallCost+SmsCost ;
-  return "R" + total.toFixed(2);
+    return 'R' + totalPhoneBill;
 }
-
-console.log(totalPhoneBill('call, sms, call, sms, sms'));

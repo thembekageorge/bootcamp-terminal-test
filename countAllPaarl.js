@@ -1,17 +1,22 @@
-function countAllPaarl(regNum){
+module.exports = function(regNum) {
+    var regNumsplit = regNum.split(',');
 
-var splittedList = regNum.split(', ');
- // var RegisNum = [];
-  var count = 0;
-   for (var i=0; i<splittedList.length; i++){
-      var registrationNumber = splittedList[i];
+    var newList = [];
 
-        if (registrationNumber.startsWith('CJ')){
-        // RegisNum.push(registrationNumber);
-          count = count +1;
+    var paarlList = [];
+
+    for (var i = 0; i < regNumsplit.length; i++) {
+
+        newList.push(regNumsplit[i]);
+
+        if (regNumsplit[i].startsWith('CJ')) {
+
+            paarlList.push(newList[i]);
         }
-   }
-return count;
 
-};
-countAllPaarl('CL 900, CJ 678 543, CA 34567, CJ 67890, CN 7864');
+    }
+
+
+
+    return paarlList.length + ' Paarl plates';
+}

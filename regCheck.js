@@ -1,7 +1,6 @@
-function regCheck(regNum, loc){
-var output = regNum.endsWith(loc);
-return output;
-}
-var isGP = regCheck('DV 23 NB GP', 'GP');
 
-console.log(isGP);
+module.exports = function RegCheck(regNum, location) {
+    var checkRegLocation = regNum.includes(location);
+
+    return checkRegLocation;
+}
