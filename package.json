@@ -1,0 +1,29 @@
+{
+  "name": "bootcamp-terminal-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "countAllFromTown.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jshint": "^2.9.4"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thembekageorge/bootcamp-backend-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thembekageorge/bootcamp-backend-tests/issues"
+  },
+  "homepage": "https://github.com/thembekageorge/bootcamp-backend-tests#readme"
+}
