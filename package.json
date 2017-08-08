@@ -10,9 +10,9 @@
     "jshint": "^2.9.4",
     "mocha": "^3.2.0"
   },
-  
+
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
