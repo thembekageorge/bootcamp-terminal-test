@@ -4,7 +4,7 @@ const assert = require('assert');
 
 const isWeekdayFunctionTest = require('../isWeekday');
 
-/
+
 const date = new Date();
 
 describe('isWeekday()', function() {
